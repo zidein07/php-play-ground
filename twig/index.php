@@ -19,4 +19,30 @@ $twig = new Twig_Environment($loader, [
     'cache' => './compilation_cache',
 ]);
 
-echo $twig->render('index.twig', ['name' => 'Fabien']);
+$list = [
+    [
+        'name' => 'ivan',
+        'age' => '33',
+    ],
+    [
+        'name' => 'stas',
+        'age' => '21',
+    ],
+    [
+        'name' => 'vlad',
+        'age' => '21',
+    ],
+    [
+        'name' => 'vasya',
+        'age' => '1',
+    ],
+    [
+        'name' => 'igor',
+        'age' => '55',
+    ],
+];
+
+echo $twig->render('index.twig', [
+    'name' => 'Fabien',
+    'user_list' => $list,
+]);

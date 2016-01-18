@@ -6,5 +6,11 @@
 </head>
 <body>
 {{ name }}
+
+{% for item in user_list %}
+    <li>{{ item.name }}</li>
+    <li>{{ item.age }}</li>
+    <hr>
+{% endfor %}
 </body>
 </html>
